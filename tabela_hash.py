@@ -7,8 +7,7 @@ class TabelaHash:
         self.capacidade = capacidade
         self.tabela = [None] * capacidade
         self.qtde_empregados = 0
-
-    # funcao de hash simples
+        
     def hash(self, id):
         return id % self.capacidade
 
@@ -17,7 +16,6 @@ class TabelaHash:
 
         novo_no = No(empregado)
 
-        # insere no inicio da lista encadeada do bucket
         novo_no.proximo = self.tabela[indice]
         self.tabela[indice] = novo_no
 
